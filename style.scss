@@ -29,6 +29,9 @@ body{
  background-repeat: no-repeat;
  z-index: 1;
 overflow: hidden;
+@media (max-width: 757px) {
+  overflow-y: auto;
+}
  .main{
   max-width: 1280px;
   width: 100%;
@@ -52,6 +55,10 @@ overflow: hidden;
       display: flex;
       gap: 2rem;
       font-size: 1.5rem;
+      @media (max-width: 757px) {
+        display: none;
+      }
+      
     }
     .menu{
       padding: 1rem;
@@ -72,8 +79,15 @@ overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 757px) {
+      flex-direction: column;
+    }
     &__item{
       width: 50%;
+      @media (max-width: 757px) {
+        width: 100%;
+        padding: 1rem 2rem;
+      }
       h1{
         font-size: 3.9rem;
       }
@@ -113,6 +127,9 @@ overflow: hidden;
       flex-direction: column;
       align-items: end;
       gap: 30px;
+      @media (max-width: 757px) {
+        flex-direction: row;
+      }
       &__item{
         display: flex;
         align-items: center;
@@ -139,9 +156,17 @@ overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 757px) {
+      flex-direction: column;
+      gap: 25px;
+    
+    }
     .card{
       width: 250px;
       height: 220px;
+      @media (max-width: 757px) {
+        width: 90%;
+      }
       padding: 1rem 1.2rem;
       background: var(--transparent-white);
       border-radius: 15px;

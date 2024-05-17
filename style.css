@@ -29,6 +29,11 @@ body {
   z-index: 1;
   overflow: hidden;
 }
+@media (max-width: 757px) {
+  #app {
+    overflow-y: auto;
+  }
+}
 #app .main {
   max-width: 1280px;
   width: 100%;
@@ -53,6 +58,11 @@ body {
   gap: 2rem;
   font-size: 1.5rem;
 }
+@media (max-width: 757px) {
+  #app .main .header .nav {
+    display: none;
+  }
+}
 #app .main .header .menu {
   padding: 1rem;
   background: var(--transparent-white);
@@ -71,8 +81,19 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 757px) {
+  #app .main .container {
+    flex-direction: column;
+  }
+}
 #app .main .container__item {
   width: 50%;
+}
+@media (max-width: 757px) {
+  #app .main .container__item {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
 }
 #app .main .container__item h1 {
   font-size: 3.9rem;
@@ -112,6 +133,11 @@ body {
   align-items: end;
   gap: 30px;
 }
+@media (max-width: 757px) {
+  #app .main .container .right {
+    flex-direction: row;
+  }
+}
 #app .main .container .right__item {
   display: flex;
   align-items: center;
@@ -135,12 +161,23 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 757px) {
+  #app .main .footer {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
 #app .main .footer .card {
   width: 250px;
   height: 220px;
   padding: 1rem 1.2rem;
   background: var(--transparent-white);
   border-radius: 15px;
+}
+@media (max-width: 757px) {
+  #app .main .footer .card {
+    width: 90%;
+  }
 }
 #app .main .footer .card h2 {
   font-size: 1.5rem;
